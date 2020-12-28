@@ -1,0 +1,2 @@
+1- Name, email, phone number, 
+2- OTP for login
