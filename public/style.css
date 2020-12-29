@@ -1,0 +1,30 @@
+body{
+    background: linear-gradient(to right, #b92b27, #1565c0);
+}
+
+nav{
+    background-color:#b92b27;
+    color: black;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav li{
+    list-style: none;
+}
+nav li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+nav li a:hover{
+    color:  #1565c0;
+    text-decoration: none;
+}
