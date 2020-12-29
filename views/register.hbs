@@ -14,11 +14,33 @@
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/login">LOGIN</a></li>
-            <li><a href="/">REGISTER</a></li>
         </ul>
     </nav>
 
-    <div class="card">
+    
+        {{#if message}}
+            <h4 class="text">{{message}}</h4>
+        {{/if}}
+    
+    <div class="register">
+        <p class="text">REGISTER</p>
+    
+        <form method="post" action="/auth/register">
+            <label class="fontawesome-user"></label>
+            <input type="text" required placeholder="Name" autocomplete="off" id="name" name="name"> 
+            <label class="fontawesome-user"></label>
+            <input type="email" id="email" required placeholder="Email" autocomplete="off" name="email">
+            <label class="fontawesome-user"></label>
+            <input type="text" required placeholder="Contact" autocomplete="off" id="contact" name="contact"> 
+            <label class="fontawesome-user"></label>
+            <input type="password" name="password" id="password" required placeholder="Password" autocomplete="off"> 
+            <label class="fontawesome-user"></label>
+            <input type="password" name="confirmPassword" id="confirmPassword" required placeholder="Confirm Password" autocomplete="off"> 
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    
+    {{!-- <div class="card">
         <div class="card-body">
             <div class="card-header">Registration From</div>
             <div class="card body">
@@ -52,7 +74,7 @@
         {{#if message}}
             <h4 class="alert alert danger mt-4">{{message}}</h4>
         {{/if}}
-    </div>
+    </div> --}}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
 </body>

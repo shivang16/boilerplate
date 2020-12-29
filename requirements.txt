@@ -1,2 +1,7 @@
-1- Name, email, phone number, 
-2- OTP for login
+2- forget password
+3- OTP for login
+
+
+extra
+- email verification
+- change password

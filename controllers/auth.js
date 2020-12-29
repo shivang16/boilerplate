@@ -1,18 +1,12 @@
 const { response } = require('express');
-const mysql = require('mysql');
 const path = require('path');
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
 
 const bcrypt = require('bcrypt');
 
-dotenv.config({path:'../.env'});
-const db = mysql.createConnection({
-    host:process.env.DATABASE_HOST,
-    user:process.env.DATABASE_USER,
-    password:process.env.DATABASE_PASSWORD,
-    database:process.env.DATABASE
-});
+const db = require('../sqlConnect');
+
 
 
 const register = (req,res)=>{
@@ -40,8 +34,8 @@ const register = (req,res)=>{
             if(error1){
                 console.log("Error in inserting Data: "+error1);
             }else{
-                console.log("User registered!");
-                return res.render('login')
+                console.log("User Added!");
+                return res.redirect('/login')
             }
         })
 
@@ -81,7 +75,6 @@ const login = async (req,res)=>{
                     expiresIn:process.env.JWT_EXPIRES_IN
                 })
                 
-                console.log("The token is: "+ token);
 
                 const cookieOptions = {
                     expires: new Date(
@@ -102,4 +95,29 @@ const login = async (req,res)=>{
      
 }
 
-module.exports = {register,login};
+
+const logout = (req,res)=>{
+    res.clearCookie('jwt');
+    res.redirect('/');
+}
+
+const forgotPassword = async (req,res)=>{
+
+    db.query("SELECT * FROM users WHERE email=?",[req.body.email],(err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            if(isEmpty(result)){
+                return res.status(402).render("register",{
+                    message:"Email Not registered"
+                })
+            }else{
+                // Send mail and add reset link
+                // in reset link add set new password page.
+                return res.send(status).redirect('/');
+            }
+        }
+    })
+}
+
+module.exports = {register,login,logout,forgotPassword};

@@ -39,7 +39,9 @@ db.connect((err)=>{
 app.use('/',require('./routes/pages'));
 app.use('/auth',require("./routes/auth"));
 
-
+app.get('*',(req,res)=>{
+    res.render('pageNotFound');
+})
 app.listen("3000",(req,res)=>{
     console.log("Server is on!");
 })
