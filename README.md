@@ -15,15 +15,25 @@ It is hosted on [localhost:3001](localhost:3001)
 	.env file must contain:
 	 
 	`DATABASE = ` -> Database name
+	
 	`DATABASE_HOST = `	-> Host name
+	
 	`DATABASE_PASSWORD = ` -> Database password
+	
 	`DATABASE_USER = ` -> Database username
+	
 	`JWT_SECRET = ` -> JsonWebToken secret
+	
 	`JWT_EXPIRES_IN = ` -> JsonWebToken Expiry time limit
+	
 	`JWT_COOKIE_EXPIRE = ` -> Cookie expire time
+	
 	`MAIL_USER = ` -> Gmail Id from which you want to send mail on forgot password
+	
 	`MAIL_PASSWORD = ` -> Password for above Gmail Id.
+	
 	`NEXMO_API_KEY = ` -> Nexmo API Key.
+	
 	`NEXMO_API_SECRET = ` -> Nexmo API Secrect.
 	
 	* Make sure that Gmail Id from which you want to send mail on forgot password has permission to allow non secure apps to access gmail (Using **nodemailer**), [link](https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4NW1MYnRiOLyOf36_EIGK00N5d3Eu4GzB46yhZ06RAnjKydTD2kMFaA0Ho10n47vxJvtmNbB-Yjr_vQja0WrQCUoREdxw)
