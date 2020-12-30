@@ -6,8 +6,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const db = require('../sqlConnect');
-
-
+const nodemailer = require('nodemailer');
 
 const register = (req,res)=>{
 
@@ -114,7 +113,7 @@ const forgotPassword = async (req,res)=>{
             }else{
                 // Send mail and add reset link
                 // in reset link add set new password page.
-                return res.send(status).redirect('/');
+                return res.redirect('/');
             }
         }
     })
