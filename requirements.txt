@@ -1,7 +1,10 @@
 2- forget password
-3- OTP for login
 
 
 extra
 - email verification
 - change password
+
+
+- register
+- OTP send to mobile -- If correct then register other-wise register again

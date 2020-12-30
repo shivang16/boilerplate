@@ -11,4 +11,6 @@ routes.get("/logout",authController.logout);
 
 routes.post("/forgotPassword",authController.forgotPassword);
 
+routes.post('/otp',authController.otp);
+
 module.exports = routes;

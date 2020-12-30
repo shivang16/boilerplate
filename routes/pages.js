@@ -1,4 +1,5 @@
 const { use } = require('bcrypt/promises');
+const { Router } = require('express');
 const express = require('express')
 const routes = express.Router()
 const jwt = require('jsonwebtoken');
@@ -42,6 +43,10 @@ routes.get('/login',(req,res)=>{
 
 routes.get('/forgotPassword',(req,res)=>{
     res.render('forgotPassword');
+})
+
+routes.get('/otp',(req,res)=>{
+    res.render('otp');
 })
 
 
