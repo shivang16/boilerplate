@@ -4,11 +4,10 @@ const express = require('express')
 const routes = express.Router()
 const jwt = require('jsonwebtoken');
 
-const db = require('../sqlConnect');
+const db = require('../utilities/sqlConnect');
 
 
 routes.get("/",(req,res)=>{
-
     const token = req.headers.cookie;
     if(!token) return res.status(401).render('index');
 

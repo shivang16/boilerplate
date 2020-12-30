@@ -42,6 +42,6 @@ app.use('/auth',require("./routes/auth"));
 app.get('*',(req,res)=>{
     res.render('pageNotFound');
 })
-app.listen("3000",(req,res)=>{
+app.listen("3001",(req,res)=>{
     console.log("Server is on!");
 })

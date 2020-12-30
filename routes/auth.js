@@ -13,4 +13,8 @@ routes.post("/forgotPassword",authController.forgotPassword);
 
 routes.post('/otp',authController.otp);
 
+routes.get('/changePass',authController.changePass);
+
+routes.post('/changePassword',authController.changePassword);
+
 module.exports = routes;
