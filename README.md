@@ -1,6 +1,6 @@
 ## BoilerPlate
 This is basic Login and Signup project created with the help of Node.js and MySQL. 
-It is hosted on [localhost:3001](localhost:3001)
+It is hosted on [localhost:3001](https://localhost:3001)
 
 ## Flow
 1. User can register with name, email (unique), contact number, and password. 
@@ -40,4 +40,4 @@ It is hosted on [localhost:3001](localhost:3001)
 	* For sending OTP, we are using [Nexmo's](https://developer.nexmo.com/) free trial. Note that OTP will be send only on the number registered in [Nexmo's](https://developer.nexmo.com/) account (as it is trial version).
 
 5. run 	`npm start` to start the project.
-6. Go to [localhost:3001](localhost:3001) to see your project. 
+6. Go to [localhost:3001](https://localhost:3001) to see your project. 
